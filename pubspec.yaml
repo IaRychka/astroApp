@@ -30,9 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter 
-  firebase_core: ^2.27.0
-  firebase_database: ^11.1.4
-  cloud_firestore: ^4.15.8
+  firebase_core: ^2.27.0   #если не работает то можно попробовать версии 1.24.0
+  firebase_database: ^11.1.4 # версия 9.1.7
+  cloud_firestore: ^4.15.8   # версия 3.5.1
 
 
   # The following adds the Cupertino Icons font to your application.
