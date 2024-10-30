@@ -4,6 +4,7 @@ import 'package:astrology_app/MainPageArt.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:astrology_app/ZodiacSignDetailsPage.dart';
 
 class mainPage extends StatelessWidget {
   @override
@@ -98,7 +99,7 @@ class _AstrologyHomePageState extends State<AstrologyHomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ZodiacSignDetailsPage(sign: sign.sign),
+                                builder: (context) => ZodiacSignDetailsPage(sign: sign.sign, description: '', imageUrl: '',),
                               ),
                             );
                           },
@@ -177,99 +178,6 @@ class ZodiacSignCard extends StatelessWidget {
   }
 }
 
-class ZodiacSignDetailsPage extends StatelessWidget {
-  final String sign;
-
-  ZodiacSignDetailsPage({required this.sign});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(sign),
-      ),
-      body: Center(
-        child: Text('Информация о знаке зодиака $sign'),
-      ),
-    );
-  }
-}
-
-/*class mainPage extends StatelessWidget {
-  const mainPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("AAAAAAAAAAAA"),
-      automaticallyImplyLeading: false,
-    ),
-   body:
-   Container(
-    alignment: Alignment.center,
-    color: Color.fromARGB(255, 0, 0, 0),
-    child:
-    Expanded(
-    child: ListView.builder(
-   padding: const EdgeInsets.all(8),
-
-    itemBuilder:(BuildContext context, index) {
-      
-      return /*Container(
-          alignment: Alignment.center,
-          color: Color.fromARGB(255, 156, 32, 245),
-
-          child:*//* Card(
-            clipBehavior: Clip.hardEdge,
-        child: InkWell(
-          splashColor: Colors.blue.withAlpha(30),
-          onTap: () {
-             Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => MainPageArticle(
-                
-              ),
-            ),
-          );
-        },
-  
-          child:*/ Container(
-            color: Colors.white,
-             child: Column(
-              children: <Widget>[
-                Expanded(
-                  flex: 1,
-                  child: Text(ArtList[0].Author),
-                  ),
-                  Expanded(
-                  flex: 1,
-                  child: Text(ArtList[0].PostTime.toString()),
-                  ),
-                  Expanded(
-                  flex: 4,
-                  child: Text(ArtList[0].Pic),
-                  ),
-                  Expanded(
-                  flex: 3,
-                  child: Text(ArtList[0].TitleArt),
-                  ),
-                  Expanded(
-                  flex: 2,
-                  child: Text(ArtList[0].TextArt),
-                  ),
-
-              ],
-           ));}
-           ),
-    )
-          )
-        
-      );
-    
-  }
-}*/
-   
   
     
     

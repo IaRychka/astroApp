@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 
 class MainPageArticle extends StatelessWidget {
@@ -27,4 +27,5 @@ class MainPageArticle extends StatelessWidget {
       )
     );
   }
-}
+}*/
+
